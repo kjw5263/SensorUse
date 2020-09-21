@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:text="Vibrate Button"
+           android:onClick="onVibrateClicked"
+           android:id="@+id/VibrateBtn"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="10"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/status"
+                android:hint="밝기 수준"
+                android:layout_below="@+id/seekBar"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/blueOnBtn"
+                android:text="bluetooth_ON"
+                android:onClick="onBluetoothONClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <Button
+                android:id="@+id/blueOffBtn"
+                android:text="bluethooth_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBluetoothOFFClicked"
+                android:layout_alignRight="@+id/blueBtn"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/wifiOnBtn"
+            android:text="wifi_ON"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onWifiOnClicked"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wifiOffBtn"
+            android:text="wifi_OFF"
+            android:onClick="onWifiOffClicked"/>
+    </LinearLayout>
+
+
+</LinearLayout>
